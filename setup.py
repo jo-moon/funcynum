@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='funcynum',
-    version='0.1',
+    version='0.2',
     packages=find_packages(exclude=['tests*']),
     license='MIT',
     description='recursion: a directory of recursive functions. sorting: a directory of functions to sort lists',
