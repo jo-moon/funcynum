@@ -72,7 +72,7 @@ def factorial(n):
     '''
     #base case- factorials only calculate until they reach 1, not 0
     if n == 0:
-        return 0
+        return 1
     if n == 1:
         return n
 

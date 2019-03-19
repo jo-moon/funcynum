@@ -39,45 +39,35 @@ def merge_sort(items):
             the array sorted in ascending order
 
         examples:
-            >>>bubble_sort([1, 7, 3, 9, 10, 13, 8, 12, 15, 19])
+            >>>merge_sort([1, 7, 3, 9, 10, 13, 8, 12, 15, 19])
             [1, 3, 7, 8, 9, 10, 12, 13, 15, 19]
-            >>>bubble_sort(['yak', 'humble', 'bumble', 'bee'])
+            >>>merge_sort(['yak', 'humble', 'bumble', 'bee'])
             ['bee', 'bumble', 'humble', 'yak']
     '''
-    if len(items)>1:
-        mid = len(items)//2
-        lefthalf = items[:mid]
-        righthalf = items[mid:]
+    if len(items) < 2:
+        return items
 
-        merge_sort(lefthalf)
-        merge_sort(righthalf)
+    half_lst = len(items) // 2
+    left_half = merge_sort(items[:half_lst])
+    right_half = merge_sort(items[half_lst:])
+    merged_lst = []
+    left_side = right_side = 0
 
-    #declaring index variables
-    i=0
-    j=0
-    k=0
-
-    #for each case, taking the 'less than' values and placing in front of the list
-    while i < len(lefthalf) and j < len(righthalf):
-        if lefthalf[i] < righthalf[j]:
-            items[k]=lefthalf[i]
-            i+=1
+    while True:
+        if left_side >= len(left_half):
+            merged_lst.extend(right_half[right_side:])
+            break
+        if right_side >= len(right_half):
+            merged_lst.extend(left_half[left_side:])
+            break
+        if left_half[left_side] < right_half[right_side]:
+            merged_lst.append(left_half[left_side])
+            left_side += 1
         else:
-            items[k]=righthalf[j]
-            j+=1
-            k+=1
+            merged_lst.append(right_half[right_side])
+            right_side += 1
 
-        while i < len(lefthalf):
-            items[k]=lefthalf[i]
-            i+=1
-            k+=1
-
-        while j < len(righthalf):
-            items[k]=righthalf[j]
-            j+=1
-            k+=1
-
-    return items
+    return merged_lst
 
 def quick_sort(items):
 
