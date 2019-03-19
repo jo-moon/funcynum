@@ -30,7 +30,7 @@ def bubble_sort(items):
     return item2
 
 def merge_sort(items):
-     '''Return array of items, sorted in ascending order
+    '''Return array of items, sorted in ascending order
 
         args:
             an array of items of a single data type
@@ -44,7 +44,6 @@ def merge_sort(items):
             >>>bubble_sort(['yak', 'humble', 'bumble', 'bee'])
             ['bee', 'bumble', 'humble', 'yak']
     '''
-    #slicing the list at its midpoint
     if len(items)>1:
         mid = len(items)//2
         lefthalf = items[:mid]
@@ -53,20 +52,20 @@ def merge_sort(items):
         mergeSort(lefthalf)
         mergeSort(righthalf)
 
-        #declaring index variables
-        i=0
-        j=0
-        k=0
+    #declaring index variables
+    i=0
+    j=0
+    k=0
 
-        #for each case, taking the 'less than' values and placing in front of the list
-        while i < len(lefthalf) and j < len(righthalf):
-            if lefthalf[i] < righthalf[j]:
-                items[k]=lefthalf[i]
-                i+=1
-            else:
-                items[k]=righthalf[j]
-                j+=1
-                k+=1
+    #for each case, taking the 'less than' values and placing in front of the list
+    while i < len(lefthalf) and j < len(righthalf):
+        if lefthalf[i] < righthalf[j]:
+            items[k]=lefthalf[i]
+            i+=1
+        else:
+            items[k]=righthalf[j]
+            j+=1
+            k+=1
 
         while i < len(lefthalf):
             items[k]=lefthalf[i]
@@ -77,8 +76,8 @@ def merge_sort(items):
             items[k]=righthalf[j]
             j+=1
             k+=1
+    return items
 
-        return items
 
 def quick_sort(items):
 
