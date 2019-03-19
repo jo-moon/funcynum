@@ -49,8 +49,8 @@ def merge_sort(items):
         lefthalf = items[:mid]
         righthalf = items[mid:]
 
-        mergeSort(lefthalf)
-        mergeSort(righthalf)
+        merge_sort(lefthalf)
+        merge_sort(righthalf)
 
     #declaring index variables
     i=0

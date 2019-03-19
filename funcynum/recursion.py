@@ -42,6 +42,8 @@ def fibonacci(n):
     '''
     #base cases- the first 2 elements in the fibonacci sequence are both 1,
     #only once these cases are identified can the function run
+    if n == 0:
+        return 0
     if n == 1:
         return 1
     elif n == 2:
@@ -69,6 +71,8 @@ def factorial(n):
             720
     '''
     #base case- factorials only calculate until they reach 1, not 0
+    if n == 0:
+        return 0
     if n == 1:
         return n
 
