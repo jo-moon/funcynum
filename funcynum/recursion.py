@@ -73,7 +73,7 @@ def factorial(n):
         return n
 
     # the function then multiplies n by n-1 for each recursion
-       else:
+    else:
         return n * factorial(n-1)
 
 def reverse(word):
