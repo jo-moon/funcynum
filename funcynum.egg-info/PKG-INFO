@@ -1,0 +1,21 @@
+Metadata-Version: 1.0
+Name: funcynum
+Version: 0.1
+Summary: recursion: a directory of recursive functions. sorting: a directory of functions to sort lists
+Home-page: https://github.com/jo-moon/funcynum
+Author: Joanne Moonsamy
+Author-email: joanne.moonsamy@gmail.com
+License: MIT
+Description: # funcynum
+        This library was created to store recursive and sorting functions
+        
+        ## building this package locally
+        `python setup.py sdist`
+        
+        ## installing this package from github
+        `pip install git+https://github.com/jo-moon/funcynum.git`
+        
+        ## updating this package from github
+        `pip install --upgrade git+https://github.com/jo-moon/funcynum.git`
+        
+Platform: UNKNOWN

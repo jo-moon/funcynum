@@ -1,0 +1,10 @@
+README.md
+setup.py
+funcynum/__init__.py
+funcynum/recursion.py
+funcynum/sorting.py
+funcynum.egg-info/PKG-INFO
+funcynum.egg-info/SOURCES.txt
+funcynum.egg-info/dependency_links.txt
+funcynum.egg-info/requires.txt
+funcynum.egg-info/top_level.txt
