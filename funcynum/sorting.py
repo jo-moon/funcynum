@@ -76,8 +76,8 @@ def merge_sort(items):
             items[k]=righthalf[j]
             j+=1
             k+=1
-    return items
 
+    return items
 
 def quick_sort(items):
 
